@@ -145,7 +145,7 @@ class Apt:
             value.url == self.url and \
             value.arch == self.arch
 
-    def _load_index(self):
+    def _load_index(self) -> None:
         """ Download repo metadata and parse package indices. """
         package_indexes = self._download_distro()
         if not package_indexes:
